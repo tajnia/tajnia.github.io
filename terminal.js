@@ -556,7 +556,7 @@ var Terminal = Terminal || function(containerId) {
           break;
         case 'who':
           output(document.title +
-                 ' - By: Eric Bidelman &lt;ericbidelman@chromium.org&gt;');
+                 ' - By: Omid tajnia &lt;tajnia@gmail.com&gt;');
           break;
         default:
           if (cmd) {
