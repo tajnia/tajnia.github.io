@@ -559,6 +559,8 @@ var Terminal = Terminal || function(containerId) {
                  '- By: Omid tajnia &lt;tajnia@gmail.com&gt;');
               output('<br/>');
           output('<img src="omid2.jpg" alt="omid" height="100" width="100">');
+          output('#################'+
+                 '- Linkedin &lt;www.linkedin.com/in/tajnia&gt;');
           break;
         default:
           if (cmd) {
