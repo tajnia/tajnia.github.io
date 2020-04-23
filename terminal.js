@@ -557,6 +557,7 @@ var Terminal = Terminal || function(containerId) {
         case 'who':
           output(document.title +
                  ' - By: Omid tajnia &lt;tajnia@gmail.com&gt;');
+          output('<img src="smiley.gif" alt="Smiley face" height="42" width="42">');
           break;
         default:
           if (cmd) {
