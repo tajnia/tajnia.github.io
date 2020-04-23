@@ -555,9 +555,9 @@ var Terminal = Terminal || function(containerId) {
           xhr.send();
           break;
         case 'who':
-          output(document.title +
-                 ' - By: Omid tajnia &lt;tajnia@gmail.com&gt;');
-              output(' <p> 1<br/> 2<br/> </p> ');
+          output('#################'+
+                 '- By: Omid tajnia &lt;tajnia@gmail.com&gt;');
+              output('<br/>');
           output('<img src="omid2.jpg" alt="omid" height="100" width="100">');
           break;
         default:
