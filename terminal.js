@@ -557,6 +557,7 @@ var Terminal = Terminal || function(containerId) {
         case 'who':
           output(document.title +
                  ' - By: Omid tajnia &lt;tajnia@gmail.com&gt;');
+              output('<br />');
           output('<img src="omid2.jpg" alt="omid" height="100" width="100">');
           break;
         default:
