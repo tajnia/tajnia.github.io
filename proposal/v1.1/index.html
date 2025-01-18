@@ -87,16 +87,31 @@
             margin-bottom: 10px;
             line-height: 1.6;
         }
+		
+        .loading-image {
+            max-width: 100%;
+            max-height: 100%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+        }
+        .content {
+            display: none; /* محتوای اصلی را در ابتدا پنهان می‌کنیم */
+        }
     </style>
 </head>
 <body>
 
+    <img src="hirmand3-3.gif" alt="Loading..."  class="loading-image" id="loadingGIF">
+<div class="content" id="mainContent">
 <header>
     <h5>بررسی تاثیرات هیدرولیکی و مورفولوژیکی بند کمال خان بررودخانه هیرمند (جریان‌ها پایین دست و اراضی سیستان) با استفاده از تکنیک‌های سنجش از دور و پردازش تصاویر توسط مدل‌های یادگیری عمیق</h5>
 	<h6>Assessing the Hydraulic and Morphological Impacts of Kamal Khan Weir on the Hirmand River (Downstream Flows and Sistan Lands) Using Remote Sensing and Deep Learning Image Processing Techniques</h6>
 </header>
 
 <nav>
+	<a href="./index.html">صفحه اصلی</a>
     <a href="#summary">خلاصه تحقیق</a>
 	<a href="#moghadmeh">مقدمه</a>
 	<a href="#tarif">تعریف مسأله</a>
@@ -335,6 +350,15 @@
 <footer>
     <p>کلیه حقوق محفوظ است &copy; 2025</p>
 </footer>
-
+</dev>
+    <script>
+        // صبر 2 ثانیه قبل از نمایش محتوای اصلی
+        setTimeout(function() {
+            // حذف تصویر گیف
+            document.getElementById('loadingGIF').style.display = 'none';
+            // نمایش محتوای اصلی
+            document.getElementById('mainContent').style.display = 'block';
+        }, 3000); // 2000 میلی‌ثانیه = 2 ثانیه
+    </script>
 </body>
 </html>
