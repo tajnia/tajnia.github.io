@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بررسی تاثیرات هیدرولیکی و مورفولوژیکی بند کمال خان بررودخانه هیرمند (جریان‌ها پایین دست و اراضی سیستان) با استفاده از تکنیک‌های سنجش از دور و پردازش تصاویر توسط مدل‌های یادگیری عمیق</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #00509e;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-container {
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+        }
+
+        footer {
+            background-color: #003f7d;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+        <h6>بررسی تاثیرات هیدرولیکی و مورفولوژیکی بند کمال خان بررودخانه هیرمند (جریان‌ها پایین دست و اراضی سیستان) با استفاده از تکنیک‌های سنجش از دور و پردازش تصاویر توسط مدل‌های یادگیری عمیق</h6>
+</header>
+
+<div class="gallery">
+    <div class="image-container">
+        <img src="./hirman-gis2.png" alt="Image 1" class="gallery-item">
+    </div>
+    <div class="image-container">
+        <img src="./img0.png" alt="Image 2" class="gallery-item">
+    </div>
+    <div class="image-container">
+        <img src="./img1.png" alt="Image 3" class="gallery-item">
+    </div>
+    <div class="image-container">
+        <img src="./img2.png" alt="Image 4" class="gallery-item">
+    </div>
+    <div class="image-container">
+        <img src="./img3.png" alt="Image 5" class="gallery-item">
+    </div>
+    <div class="image-container">
+        <img src="./img4.png" alt="Image 6" class="gallery-item">
+    </div>
+    <div class="image-container">
+        <img src="./img5.png" alt="Image 7" class="gallery-item">
+    </div>
+    <div class="image-container">
+        <img src="./img6.png" alt="Image 8" class="gallery-item">
+    </div>
+    <div class="image-container">
+        <img src="./img7.png" alt="Image 9" class="gallery-item">
+    </div>
+    <div class="image-container">
+        <img src="./img8.png" alt="Image 10" class="gallery-item">
+    </div>
+    <div class="image-container">
+        <img src="./img9.png" alt="Image 11" class="gallery-item">
+    </div>
+    <div class="image-container">
+        <img src="./img10.png" alt="Image 12" class="gallery-item">
+    </div>
+    <div class="image-container">
+        <img src="./img12.png" alt="Image 13" class="gallery-item">
+    </div>
+    <div class="image-container">
+        <img src="./img13.png" alt="Image 14" class="gallery-item">
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
+
+<footer>
+    <p>کلیه حقوق محفوظ است &copy; 2025</p>
+</footer>
+
+
+<script>
+    const images = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('myModal');
+    const modalImg = document.getElementById('img01');
+    const close = document.querySelector('.close');
+
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        });
+    });
+
+    close.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
